@@ -1,4 +1,4 @@
-ld30
+LD30
 ====
 
-A web game for Ludum Dare 30 built using Phaser.
+Game for Ludum Dare 30 created using HMTL5 Canvas, Javascript, and Phaser.
