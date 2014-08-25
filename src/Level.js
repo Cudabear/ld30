@@ -119,7 +119,7 @@ Level = function(){
 		}
 
 		if(!config.isLoading && enemies.length < config.maxEnemies){
-			if(Math.random()*100 < 1){
+			if(Math.random()*100 < 2){
 				enemies.push(new Enemy());
 			}
 		}
