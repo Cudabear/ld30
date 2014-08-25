@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>ld30</title>
+    <title>ld30: Connected Worlds</title>
     
     <!--StarChaser stylesheets -->
     <style type="text/css">
@@ -21,16 +21,26 @@
         #game-wrapper { border: 3px solid #333; border-top-width: 0px; border-bottom-width: 0px; 
             margin-left: auto; margin-right: auto; width: 1040px; height: 630px; background-color: black; background-image: url('res/img/wrapper/fencepost.png');}
         #game { margin-left: auto; margin-right: auto; width: 1040px; height:630px; overflow-y: hidden; }
-        #game-blocker { width: 1040px; height:630px; background-color: #121212; position: absolute;}
+        #game-blocker { font-family: 'Press Start 2P', cursive; width: 1040px; height:630px; background-color: #121212; position: absolute;}
         #game-blocker img {margin-left: auto; margin-right: auto; display: block;}
         #game-blocker p {color: white; font-size: 36;}
+        .label { font-family: 'Press Start 2P', cursive; position: absolute; font-size: 10;}
     </style>
+
+    <!-- font family import -->
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 
     <!-- LD30 javascript library files -->
     <script type="text/javascript" src ="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src ="lib/phaser/phaser.js"></script>
 
     <!-- LD30 javascripts project files -->
+    <script type="text/javascript" src="src/Player.js"></script>
+    <script type="text/javascript" src="src/InputHandler.js"></script>
+    <script type="text/javascript" src="src/Level.js"></script>
+    <script type="text/javascript" src="src/Bullet.js"></script>
+    <script type="text/javascript" src="src/Enemy.js"></script>
+    <script type="text/javascript" src="src/Label.js"></script>
 </head>
 <body>
     <div style="background-color: black; background-image: url('res/img/wrapper/fence.png');">
@@ -46,7 +56,7 @@
     <!-- <div class="horizontal-fence-post"></div> -->
     <div id="footer"> 
         <div id="text">
-            <span>Created by Cudabear for Ludum Dare #30: Theme TBD.  Do not Redistribute without Permission.  Looking for the main website?
+            <span>Created by Cudabear for Ludum Dare #30: Connected Worlds.  Do not Redistribute without Permission.  Looking for the main website?
                 <a href="..">Click Here!</a>
             </span>
         </div>
