@@ -30,7 +30,8 @@ var config = {
 	enemyHealth: 2,
 	enemySpeed: 50,
 	maxEnemies: 1,
-	isDead: false
+	isDead: false,
+	spawnChance: 2
 }
 
 window.onload = function(){
@@ -100,7 +101,7 @@ function create(){
 	harderSfx = game.add.audio('harder', 0.6, false);
 	deadSfx = game.add.audio('dead', 1, false);
 
-	//music.play();
+	music.play();
 
 	//game.stage.backgroundColor = '#121212';
 	//gotta base everything off 0, 0... so 0, 0 is actually this.

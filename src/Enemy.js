@@ -1,6 +1,10 @@
 Enemy = function(){
 	this.spawns = [
 		{x: WIDTH/2, y: 0},
+		{x: WIDTH/2, y: 0},
+		{x: WIDTH/2, y: 0},
+		{x: WIDTH/2, y: HEIGHT},
+		{x: WIDTH/2, y: HEIGHT},
 		{x: WIDTH/2, y: HEIGHT},
 		{x: 0, y: 275},
 		{x: WIDTH - 50, y: 275},
@@ -13,7 +17,7 @@ Enemy = function(){
 	var spawn = this.spawns[spawnIndex];
 
 	this.speed = config.enemySpeed;
-	if(spawnIndex > 1){
+	if(spawnIndex > 5){
 		this.speed /= 4;
 	}
 

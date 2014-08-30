@@ -81,6 +81,7 @@ Level = function(){
 			config.lastLevelTime = game.time.now;
 			config.enemyHealth += 0.5;
 			config.enemySpeed += 0.5;
+			config.spawnChance += 0.05;
 			harderSfx.play();
 			config.maxEnemies++;
 		}
@@ -119,7 +120,7 @@ Level = function(){
 		}
 
 		if(!config.isLoading && enemies.length < config.maxEnemies){
-			if(Math.random()*100 < 2){
+			if(Math.random()*100 < config.spawnChance){
 				enemies.push(new Enemy());
 			}
 		}
