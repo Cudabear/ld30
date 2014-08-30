@@ -148,6 +148,7 @@ Level = function(){
 
 					for(var i = 0; i < enemies.length; i++){
 						enemies[i].calculatePosition();
+						enemies[i].direction *= -1;
 					}
 
 					this.blackFloor.body.checkCollision.up = false;
@@ -174,6 +175,7 @@ Level = function(){
 
 					for(var i = 0; i < enemies.length; i++){
 						enemies[i].calculatePosition();
+						enemies[i].direction *= -1;
 					}
 
 					this.blackFloor.body.checkCollision.up = true;

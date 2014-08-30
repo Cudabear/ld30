@@ -11,7 +11,7 @@ Bullet = function(x, y, direction){
 	this.speed = 1000;
 
 	this.outOfBounds = function(bullet){
-		bullet.kill();
+		player.killBullet(bullet);
 	}
 
 	this.sprite.events.onOutOfBounds.add(this.outOfBounds);

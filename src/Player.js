@@ -47,16 +47,18 @@ Player = function(x, y){
 			this.sprite.tint = 0xFFFFFF;
 		}
 
-		if(config.canSpin && this.sprite.y > HEIGHT/2 ){
-			config.isSpinning = true;
-			config.canSpin = false;
-		}
+		// if(config.canSpin && this.sprite.y > HEIGHT/2 ){
+		// 	config.isSpinning = true;
+		// 	config.canSpin = false;
+		// }
 
 		this.expBar.width = (WIDTH - 594 - 10)*((this.exp - this.expForLevels[this.level])/(this.expForLevels[this.level + 1] - this.expForLevels[this.level]));
 
-		if(this.sprite.y >= HEIGHT/2 + 28 ){
-			config.canSpin = true;
-		}
+		//reset if the player falls below the world
+		 if(this.sprite.y >= HEIGHT/2 + 28 ){
+		 	this.sprite.y = 0;
+		 	this.sprite.x = WIDTH/2;
+		 }
 
 		if(this.bulletTime > 0){
 			this.bulletTime--;
@@ -222,6 +224,23 @@ Player = function(x, y){
 			//if(!shootSfx.isPlaying){
 				shootSfx.play();
 			//}
+		}
+	}
+
+	this.killBullet = function(bullet){
+		var index = -1;
+		for(var i = 0; i < this.bullets.length; i++){
+			var bulletList = this.bullets[i].sprite;
+
+			if(bullet == bulletList){
+				index = i;
+				break;
+			}
+		}
+
+		if(index > -1){
+			this.bullets.splice(index, 1);
+			bullet.kill();
 		}
 	}
 
